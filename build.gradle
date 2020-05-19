@@ -1,0 +1,24 @@
+plugins {
+	id 'org.springframework.boot' version '2.3.0.RELEASE'
+	id 'java'
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+	mavenCentral()
+	maven { url 'testrepogen/mavenrepo' }
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter:2.3.0.RELEASE'
+	implementation 'org.springframework.boot:spring-boot-starter-web:2.3.0.RELEASE'
+	implementation 'com.google.guava:guava:19.0'
+	runtimeOnly 'test.nebula:a:1.0.0'
+}
+
+test {
+	useJUnitPlatform()
+}
